@@ -1,4 +1,4 @@
-![image](https://github.com/dogucanelci/Azure_e2e_data_engineering_project_1/assets/59261856/bf084dc4-c403-4b3e-a1c4-f67bdc339f6b)
+![0_report_first_overview](https://github.com/dogucanelci/GCP_Uber_Data_Engineering_Project/assets/59261856/0f1f95d7-a087-4601-8a8d-bbe117f5a70f)
 
 <h1 style="display: inline-block;"> Uber End to End Data Engineering Project on Google Cloud Platform </h1>
 buraya data info ve linkler gelecek
@@ -25,14 +25,13 @@ This project can be defined as End-to-end Data Engineering Project applied in Go
 
 You can find the detailed information on the diagram below:
 
-![1_project_str](https://github.com/dogucanelci/Azure_e2e_data_engineering_project_1/assets/59261856/f0fdf9eb-5b61-4f18-806f-2d8f5d2cef13)
-
+![1_project_structure](https://github.com/dogucanelci/GCP_Uber_Data_Engineering_Project/assets/59261856/8d43e743-6a78-45c9-acbf-9425f2d88f64)
 
 <a name="data-ingestion"></a>
 ### 📤 Data Ingestion
-- A new cloud bucket is created as a source of the raw data.The raw dataset is uploaded into this bucket as .csv file. 
-
-![2_IR](https://github.com/dogucanelci/Azure_e2e_data_engineering_project_1/assets/59261856/a2e6d6ee-5b67-4e16-8c99-4c54a1488d5a)
+- A new cloud bucket is created as a source of the raw data.The raw dataset is uploaded into this bucket as .csv file.
+  
+![2_data_ingestion_bucket](https://github.com/dogucanelci/GCP_Uber_Data_Engineering_Project/assets/59261856/789d5c40-0bb7-4c49-b29d-03e0777bff71)
 
 <a name="data-vm"></a>
 ### ⚙️ Compute Engine Building
@@ -40,6 +39,7 @@ You can find the detailed information on the diagram below:
 - VM is created and access the instance via SSH.
 - All requirements(python3 and mage.ai) are installed.
 - Requirements:
+  
 ```sh
 # Install Python and pip 
 sudo apt-get update
@@ -54,24 +54,29 @@ sudo pip3 install pandas
 sudo pip3 install google-cloud
 sudo pip3 install google-cloud-bigquery
 ```
+![3_virtual_machine_building](https://github.com/dogucanelci/GCP_Uber_Data_Engineering_Project/assets/59261856/3d120f3f-c637-4646-ab14-a32d199e1f25)
 
 <a name="data-etl"></a>
 ### 📥 Data Orchestration and ETL Process
 - Python scripts are built for data extraction, transformation and loading in Mage.ai with consistent order for get raw data from source bucket, manipulate and load into BigQuery Datawarehouse for analysing.
 
-![8_synapse_pipeline](https://github.com/dogucanelci/Azure_e2e_data_engineering_project_1/assets/59261856/068eeb10-86e0-4122-b172-6480409f8fa4)
+![4_mage_ai_etl](https://github.com/dogucanelci/GCP_Uber_Data_Engineering_Project/assets/59261856/f0f39b0a-5fc7-45c8-a17f-4111e0e205dd)
 
 <a name="data-bqdwh"></a>
 ### 📊 BigQuery Datawarehouse
 - When load process is done, there are dim tables and 1 fact table in BigQuery Data Warehouse as expected.
 - In BigQuery, new big table(tbl_analytics) is created by join dim tables with fact tables to get desired columns.
+  
+![5_bigquery_all_tables](https://github.com/dogucanelci/GCP_Uber_Data_Engineering_Project/assets/59261856/8454208d-020e-4b98-b67a-6c0ab370f6fc)
 
+![6_bigquery_tbl_analytics](https://github.com/dogucanelci/GCP_Uber_Data_Engineering_Project/assets/59261856/a305f1f8-fa8e-4fff-b6bd-0a21f023fadf)
 
 <a name="data-reporting"></a>
 ### 📊 Data Reporting
 - BigQuery is connected with Looker Studio BI , and used the Views of the DB to create interactive and insightful data visualizations.
 
-![10_powerbi_report](https://github.com/dogucanelci/Azure_e2e_data_engineering_project_1/assets/59261856/67e3b07b-44f3-448b-b774-202b28850015)
+![7_report1](https://github.com/dogucanelci/GCP_Uber_Data_Engineering_Project/assets/59261856/019ea373-1ed6-45ae-9da0-8c36637514b9)
+![8_report2](https://github.com/dogucanelci/GCP_Uber_Data_Engineering_Project/assets/59261856/89baf668-c774-43ad-a14d-6eb71ada0de3)
 
 
 ### 🛠️ Technologies Used
