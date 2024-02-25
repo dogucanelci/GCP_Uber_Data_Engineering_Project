@@ -1,19 +1,25 @@
 ![0_report_first_overview](https://github.com/dogucanelci/GCP_Uber_Data_Engineering_Project/assets/59261856/0f1f95d7-a087-4601-8a8d-bbe117f5a70f)
 
 <h1 style="display: inline-block;"> Uber End to End Data Engineering Project on Google Cloud Platform </h1>
-buraya data info ve linkler gelecek
+
+## Dataset
+TLC Trip Record Data Yellow and green taxi trip records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts.
+
+More info about dataset can be found here:
+Website - https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page <br>
+Data Dictionary - https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf
 
 ## 📝 Table of Contents
 1. [Project Overview](#introduction)
-2. [Project Architecture](#project-architecture)  
-  2.1. [Data Modeling](#data-modeling)
-  2.2. [Data Ingestion](#data-ingestion)  
-  2.3. [Compute Engine Building](#data-vm)  
-  2.4. [ETL Process](#data-etl)
-  2.5. [BigQuery Data Warehouse](#data-bqdwh)
-  2.6. [Data Reporting](#data-reporting)
-3. [Credits](#credits)
-4. [Contact](#contact)
+2. [Project Architecture](#project-architecture) <br>
+  2.1. [Data Modeling](#data-modeling) <br>
+  2.2. [Data Ingestion](#data-ingestion) <br>
+  2.3. [Compute Engine Building](#data-vm) <br>
+  2.4. [ETL Process](#data-etl) <br>
+  2.5. [BigQuery Data Warehouse](#data-bqdwh) <br>
+  2.6. [Data Reporting](#data-reporting) <br>
+4. [Credits](#credits)
+5. [Contact](#contact)
 
 <a name="introduction"></a>
 ## 🔬 Project Overview 
@@ -26,6 +32,13 @@ This project can be defined as End-to-end Data Engineering Project applied in Go
 You can find the detailed information on the diagram below:
 
 ![1_project_structure](https://github.com/dogucanelci/GCP_Uber_Data_Engineering_Project/assets/59261856/8d43e743-6a78-45c9-acbf-9425f2d88f64)
+
+<a name="data-modeling"></a>
+### 📤 Data Modeling
+- Uber dataset is investigated in scope of understanding main structure of the dataset, detail knowledge about data as column descriptions are completed.
+- New data model is created in first process.
+  
+![0_data_modeling](https://github.com/dogucanelci/GCP_Uber_Data_Engineering_Project/assets/59261856/6cefa3cf-be64-4cc4-99bf-bc2ebad9e4a3)
 
 <a name="data-ingestion"></a>
 ### 📤 Data Ingestion
